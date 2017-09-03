@@ -111,7 +111,7 @@ class Craweling(object):
 
         data = {'Date': date_n, 'Meet': meets,
                 'Winner_id': win_n, "Loser_id": loss_n,
-                "w1": w1, "w2": w3, "w3": w3, "w4": w4, "w5": w5,
+                "w1": w1, "w2": w2, "w3": w3, "w4": w4, "w5": w5,
                 "l1": l1, "l2": l2, "l3": l3, "l4": l4, "l5": l5,
                 "wl": wlset}
 
@@ -164,7 +164,7 @@ class CrawelingCurrentRating(CrawelingAthlete):
         if not re.match(r'[0-9]+', rating):
             return False
         rating = int(rating)
-        player_rating = pd.DataFrame({'player_id': [i_d], 'current_rating': [rating]})
+        player_rating = {'player_id': [i_d], 'current_rating': [rating]}
         return player_rating
 
 
